@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="meng" extends="json-default">
+	  <!-- user action -->
+		<action name="login" class="com.theme.action.UserAction"
+			method="login">
+			<result type="json" name="success">
+				<param name="root">result</param>
+			</result>
+			<result type="json" name="error">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="init" class="com.theme.action.UserAction" method="init">
+			<result name="success">/page/index.jsp</result>
+		</action>
+		<!-- theme action -->
+		<action name="initTheme" class="com.theme.action.ThemeAction"
+			method="init">
+			<result name="success">/page/options/option.jsp</result>
+		</action>
+		<action name="getTheme" class="com.theme.action.ThemeAction"
+			method="getTheme">
+			<result name="success" type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+		<action name="addTheme" class="com.theme.action.ThemeAction"
+			method="init">
+			<result name="success">/page/options/add.jsp</result>
+		</action>
+		<action name="updateOp" class="com.theme.action.ThemeAction"
+			method="updateOp">
+			<result name="success">/page/options/update.jsp</result>
+		</action>
+		<action name="save" class="com.theme.action.ThemeAction" method="save">
+		  <result name="success" type="json">
+		    <param name="root">data</param>
+		  </result>
+		  <result name="error" type="json">
+		    <param name="root">data</param>
+		  </result>
+		</action>
+		<action name="update" class="com.theme.action.ThemeAction" method="update">
+		  <result name="success" type="json">
+		    <param name="root">data</param>
+		  </result>
+		</action>
+		<action name="delete" class="com.theme.action.ThemeAction" method="delete">
+		   <result name="success" type="json">
+		    <param name="root">data</param>
+		  </result>
+		</action>
+		<!-- charts action -->
+		<action name="initcharts" class="com.theme.action.ChartsAction" method="initChart">
+		   <result name="success">/page/charts/charts.jsp</result>
+		</action>
+		<action name="showCharts" class="com.theme.action.ChartsAction" method="initChart">
+		   <result name="success">/page/charts/queryChart.jsp</result>
+		</action>
+		<action name="getCharts" class="com.theme.action.ChartsAction" method="showCharts">
+		   <result name="success" type="json">
+		    <param name="root">data</param>
+		  </result>
+		</action>
+		<action name="allTheme" class="com.theme.action.IndexAction" method="init">
+		   <result name="success">/theme_list.jsp</result>
+		</action>
+	</package>
+</struts>    

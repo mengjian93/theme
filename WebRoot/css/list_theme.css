@@ -1,0 +1,30 @@
+.page a{
+	font-size:0.2rem;
+	float: left;
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	min-width: 30px;
+	height: 30px;
+	border: 1px solid #bbb;
+	margin-left: 10px;
+	color: blue;
+}
+.last{
+	font-size:0.2rem;
+	float: left;
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	width: 5rem;
+	height: 30px;
+	border: 1px solid #bbb;
+	margin-left: 10px;
+	color: blue;
+}
+.page a:HOVER{
+	background: #F2F8FF;
+	border-color: #3388FF;
+}
