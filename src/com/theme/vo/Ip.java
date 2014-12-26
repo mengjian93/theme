@@ -10,6 +10,13 @@ public class Ip {
 	@GeneratedValue
 	private int id;//id
 	private String ip_address;//ip地址
+	private String themeId;
+	public String getThemeId() {
+		return themeId;
+	}
+	public void setThemeId(String themeId) {
+		this.themeId = themeId;
+	}
 	public int getId() {
 		return id;
 	}

@@ -14,15 +14,18 @@
 			  opt+=optIdn[i].value+",";
 		  }
 	  }
-	  var url="getcount.action?id="+opt;
+	  var themeid=$("#themeId1").val();
+	  var url="getcount.action?id="+opt+"&&themeId="+themeid;
 	  $.ajax({
 		  url:url,
 		  datatype:'json',
 		  success:function(data){
 			  if(data.result=="success"){
-				  $.pgwModal('close');
 				  alert("投票成功");
-				  
+				  $.pgwModal('close');
+			  }else{
+				  alert("您已经投过票了");
+				  $.pgwModal('close');
 			  }
 		  }
 	  });
@@ -33,6 +36,7 @@
 <body>
 	<form action="">
 	  <label><s:property value="theme.theme_name"/></label>
+	  <input type="hidden" id="themeId1" value="<s:property value="theme.id"/>">
 	   <s:iterator value="optList" id="opt">
 	  <s:if test='theme.tag=="1"'>
 	     <input type="checkbox" name="cheOpt">
