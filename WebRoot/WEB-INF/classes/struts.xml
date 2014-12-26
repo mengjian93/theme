@@ -67,5 +67,13 @@
 		<action name="allTheme" class="com.theme.action.IndexAction" method="init">
 		   <result name="success">/theme_list.jsp</result>
 		</action>
+		<action name="count" class="com.theme.action.IndexAction" method="count">
+		   <result name="success">/page/index/getTheme.jsp</result>
+		</action>
+		<action name="getcount" class="com.theme.action.IndexAction" method="getCount">
+		   <result name="success" type="json">
+		    <param name="root">resu</param>
+		   </result>
+		</action>
 	</package>
 </struts>    

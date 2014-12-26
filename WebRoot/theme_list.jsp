@@ -10,10 +10,16 @@
 <link rel="stylesheet" href="css/skeleton.css">
 <link rel="stylesheet" href="css/web_index.css">
 <link rel="stylesheet" href="css/list_theme.css">
-<link rel="stylesheet" href="css/list_theme.css">
+<link rel="stylesheet" href="css/pgwmodal.min.css">
+<script type="text/javascript" src="js/pgwmodal.min.js"></script>
 <script type="text/javascript">
-	function openDialog() {
-		
+	function openDialog(id) {
+		 $.pgwModal({
+			url:'count.action?id='+id,
+			target: '#theme_get',
+			titleBar:false,
+			maxWidth:400,
+		}); 
 	}
 </script>
 </head>
@@ -33,17 +39,19 @@
 		</nav>
 	</div>
 	<div class="container">
-		<ul style="list-style: none;">
+		<ul style="list-style: none;margin-left: 20px;">
 			<s:iterator value="list" id="t">
-				<li><s:property value="#t.theme_name" /><a href="#"
-					onclick="javascript:openDialog();">投票</a></li>
+		    <li>
+		        <a href="#" onclick="javascript:openDialog(<s:property value="#t.id"/>);">投票</a>
+		        <s:property value="#t.theme_name" />
+			</li>
 			</s:iterator>
 		</ul>
 	</div>
 	<div class="container">
-		<div class="page">
+		<div class="page" style="margin-left: 10px;">
 			<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#"
-				class="last">下一页></a>
+				class="last">下一页</a>
 		</div>
 	</div>
 	<div id="theme_get"></div>

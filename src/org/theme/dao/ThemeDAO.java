@@ -66,6 +66,15 @@ public class ThemeDAO {
 		//System.out.println(list.get(0));
 		return list;
 	}
+	public List<Options> queryOpt(String themeId) {
+		String sql="select * from tb_options where themeId="+themeId;
+		session=HibernateSessionFactory.getSession();
+		@SuppressWarnings("unchecked")
+		List<Options> list=(List<Options>) session.createSQLQuery(sql).addEntity(Options.class).list();
+		session.close();
+		//System.out.println(list.get(0));
+		return list;
+	}
 	//通过theme id查询选项
 		public List<Integer> findCount(String id) {
 			String sql="select count from tb_options where themeId="+id;
