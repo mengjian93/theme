@@ -10,6 +10,13 @@ import com.theme.vo.Theme;
 public class IndexAction extends ActionSupport{
 	ThemeDAO dao=new ThemeDAO();
 	private List<Theme> list;
+	private String optionId;
+	public String getOptionId() {
+		return optionId;
+	}
+	public void setOptionId(String optionId) {
+		this.optionId = optionId;
+	}
 	public List<Theme> getList() {
 		return list;
 	}

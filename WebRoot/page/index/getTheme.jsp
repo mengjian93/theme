@@ -8,7 +8,10 @@
 </head>
 
 <body>
-	This is my JSP page.
-	<br>
+<form action="">
+
+
+
+</form>
 </body>
 </html>

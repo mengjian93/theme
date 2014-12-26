@@ -100,4 +100,15 @@ public class ThemeDAO {
 		session.close();
 		System.out.println("sucees");
 	}
+	
+	public void countAll(List<String> optionId) {
+		session=HibernateSessionFactory.getSession();
+		String sql="";
+		for (int i = 0; i < optionId.size(); i++) {
+			sql="update tb_options set count=count+1 where id='"+optionId.get(i)+"'";
+			session.createSQLQuery(sql).executeUpdate();
+		}
+		session.close();
+	}
+	
 }
