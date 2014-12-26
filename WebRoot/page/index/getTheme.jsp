@@ -8,10 +8,6 @@
 </head>
 
 <body>
-<form action="">
-
-
-
-</form>
+	<form action=""></form>
 </body>
 </html>

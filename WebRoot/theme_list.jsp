@@ -10,20 +10,10 @@
 <link rel="stylesheet" href="css/skeleton.css">
 <link rel="stylesheet" href="css/web_index.css">
 <link rel="stylesheet" href="css/list_theme.css">
+<link rel="stylesheet" href="css/list_theme.css">
 <script type="text/javascript">
 	function openDialog() {
-		$("#theme_get").dialog({
-			title : '投票',
-			width : 400,
-			height : 400,
-			modal : true,
-			buttons : [{
-				text:'投票',
-				handler : function() {
-					alert("hhaha");
-				}
-			}],
-		});
+		
 	}
 </script>
 </head>
