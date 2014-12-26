@@ -30,7 +30,6 @@
 		<nav class="navbar">
 			<div class="container">
 				<ul class="navbar-list">
-					<li class="navbar-item"><a href="about_US.jsp" class="mybut">关于我们</a></li>
 					<li class="navbar-item"><a href="allTheme.action"
 						class="mybut">投票专区</a></li>
 					<li class="navbar-item"><a href="index.jsp" class="mybut">首页</a></li>
