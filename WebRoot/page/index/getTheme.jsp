@@ -32,7 +32,6 @@
   }
 </script>
 </head>
-
 <body>
 	<form action="">
 	  <label><s:property value="theme.theme_name"/></label>
