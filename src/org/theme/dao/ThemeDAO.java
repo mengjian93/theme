@@ -10,7 +10,7 @@ import com.theme.vo.Options;
 import com.theme.vo.Theme;
 
 public class ThemeDAO {
-	Session session;
+	Session session=null;
     //查询数据库中所有主题
 	@SuppressWarnings("unchecked")
 	public List<Theme> allTheme() {

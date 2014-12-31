@@ -1,7 +1,6 @@
 package org.theme.dao;
 
 import org.hibernate.Session;
-
 import com.theme.imp.base.HibernateSessionFactory;
 import com.theme.vo.Ip;
 
