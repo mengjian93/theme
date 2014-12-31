@@ -1,4 +1,4 @@
-package org.theme.dao;
+package com.theme.dao;
 
 //import java.util.List;
 

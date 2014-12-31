@@ -1,8 +1,8 @@
 package com.theme.test;
 
 import org.junit.Test;
-import org.theme.dao.UserDAO;
 
+import com.theme.dao.UserDAO;
 import com.theme.vo.User;
 
 import junit.framework.TestCase;

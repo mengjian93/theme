@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.sf.json.JSONObject;
-import org.theme.dao.UserDAO;
+
 import com.opensymphony.xwork2.ActionSupport;
+import com.theme.dao.UserDAO;
 import com.theme.vo.User;
 
 public class UserAction extends ActionSupport {

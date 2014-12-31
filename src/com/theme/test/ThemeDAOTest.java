@@ -3,7 +3,8 @@ package com.theme.test;
 import java.util.List;
 
 import org.junit.Test;
-import org.theme.dao.ThemeDAO;
+
+import com.theme.dao.ThemeDAO;
 
 import junit.framework.TestCase;
 
