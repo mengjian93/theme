@@ -32,10 +32,7 @@
 		<nav class="navbar">
 			<div class="container">
 				<ul class="navbar-list">
-					<!-- <li class="navbar-item"><a href="allTheme.action"
-						class="mybut">投票专区</a></li> -->
 					<li class="navbar-item"><span class="mybut">投票专区</span></li>
-					<!-- <li class="navbar-item"><a href="index.jsp" class="mybut">首页</a></li> -->
 				</ul>
 			</div>
 		</nav>
@@ -55,12 +52,6 @@
 		</div>
 		<br><br>
 	</div>
-	<!-- <div class="container" style="height:6rem;border: 1px solid #bbb;border-top:none;">
-		<div class="page" style="margin-left: 10px;">
-			<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#"
-				class="last">下一页</a>
-		</div>
-	</div> -->
 	<div id="theme_get"></div>
 </body>
 </html>
