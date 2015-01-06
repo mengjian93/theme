@@ -6,6 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title>投票专区</title>
+<link rel="shortcut icon" href="images/myVote.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/skeleton.css">
 <link rel="stylesheet" href="css/web_index.css">
@@ -22,6 +23,7 @@
 		}); 
 	}
 </script>
+
 </head>
 
 <body>
@@ -38,21 +40,27 @@
 			</div>
 		</nav>
 	</div>
-	<div class="container">
-		<ul style="list-style: none;margin-left: 20px;">
+	<div class="container" style="border: 1px solid #bbb;border-top:none;width: 80%;">
+		<br>
+		<ul class="myul" style="list-style: none;margin-left: 5rem;">
 			<s:iterator value="list" id="t">
-				<li><a href="#"
+				<li><a class="button" href="#"
 					onclick="javascript:openDialog(<s:property value="#t.id"/>);">投票</a>
-					<s:property value="#t.theme_name" /></li>
+					<span><s:property value="#t.theme_name" /></span></li>
 			</s:iterator>
 		</ul>
+		<div class="page" style="margin-left:4rem;">
+			<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#"
+				class="last">下一页</a>
+		</div>
+		<br><br>
 	</div>
-	<div class="container">
+	<!-- <div class="container" style="height:6rem;border: 1px solid #bbb;border-top:none;">
 		<div class="page" style="margin-left: 10px;">
 			<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#"
 				class="last">下一页</a>
 		</div>
-	</div>
+	</div> -->
 	<div id="theme_get"></div>
 </body>
 </html>
