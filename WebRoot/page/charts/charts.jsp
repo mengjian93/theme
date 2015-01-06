@@ -63,6 +63,14 @@
 			height : 400,
 			closable : false,
 			modal : true,//屏幕不能编辑
+			toolbar:[
+				{
+					text : '柱状图查看',
+					iconCls : 'icon-edit',
+					handler : function() {
+						change();
+					}
+			}],
 			buttons : [ {
 				text : '完成',
 				handler : function() {
@@ -77,10 +85,7 @@
 			type : 'post',
 			dataType : 'json',
 			success : function(obj) {
-				var myChart = echarts.init(document.getElementById('mainChart'));
-				//var val = obj[0];
-				//alert(val.title.text);
-				//myChart.hideLoading();
+			
 				option = {
 					    title : {
 					        text:obj[0].title.text,
@@ -91,7 +96,7 @@
 					    toolbox: {
 					        show : true,
 					        feature : {
-					            magicType : {show: true, type: ['pie', 'bar']},
+					            magicType : {show: true, type: ['line', 'bar']},
 					            restore : {show: true},
 					        }
 					    },
@@ -114,9 +119,45 @@
 					        },
 					    ]
 					};
-				 myChart.setOption(option);    
+				option2 = {
+					    title : {
+					    	text:obj[0].title.text,
+					        x:'center'
+					    },
+					    tooltip : {
+					        trigger: 'item',
+					        formatter: "{a} <br/>{b} : {c} ({d}%)"
+					    },
+					    legend: {
+					        orient : 'vertical',
+					        x : 'left',
+					        //data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+					       
+					    },
+					    calculable : true,
+					    series : [
+					        {
+					            name:'访问来源',
+					            type:'pie',
+					            radius : '55%',
+					            data:[
+					                {value:335, name:'直接访问'},
+					                {value:310, name:'邮件营销'},
+					                {value:234, name:'联盟广告'},
+					                {value:135, name:'视频广告'},
+					                {value:1548, name:'搜索引擎'}
+					            ]
+					        }
+					    ]
+					};
+				 change(option2);
 			}
 		});
+	}
+	
+	function change(option){
+		var myChart = echarts.init(document.getElementById('mainChart'));
+		myChart.setOption(option);  
 	}
 </script>
 </head>

@@ -19,8 +19,8 @@
 			closable : false,
 			title : "后台登录",
 			modal : true, //模式化
-			width : 300,
-			height : 200,
+			width : 400,
+			height : 300,
 			buttons : [//dialog右下角的按钮，以Json数组形式添加
 			{
 				text : "登录", //按钮名称
@@ -76,7 +76,7 @@ th {
 
 <body>
 	<div id="loginAndRegDialog"
-		style="width:250px;height:150px;text-align: center;">
+		style="width:300px;height:220px;text-align: center;">
 		<form id="loginForm" method="post">
 			<table align="center" style="margin-top: 30px;">
 				<tr>

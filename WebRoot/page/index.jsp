@@ -47,7 +47,6 @@ function addTab(tabId,title,url){//创建选项卡
 			<div title="投票情况" icon="icon-edit" style="padding: 10px;">
                <a href="#" class="easyui-linkbutton" icon="icon-remove" plain="true" onclick="javascript:addTab('tabId_loginInfo1','投票情况查看','<%=basePath%>/initcharts.action')">查看投票情况</a>
             </div>
-			<div title="IP查看" icon="icon-edit">content3</div>
 		</div>
 	</div>
 	<div id="mainPanle" region="center" style="overflow: hidden;">

@@ -4,6 +4,7 @@
 <html>
 <head>
 <title>投票</title>
+<meta content="">
 <script type="text/javascript">
   function count(){
 	  var optid=document.getElementsByName("cheOpt");

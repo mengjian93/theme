@@ -32,7 +32,7 @@
 				<ul class="navbar-list">
 					<li class="navbar-item"><a href="allTheme.action"
 						class="mybut">投票专区</a></li>
-					<li class="navbar-item"><a href="index.jsp" class="mybut">首页</a></li>
+					<!-- <li class="navbar-item"><a href="index.jsp" class="mybut">首页</a></li> -->
 				</ul>
 			</div>
 		</nav>

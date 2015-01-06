@@ -8,13 +8,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="css/normalize.css">
+<meta http-equiv="refresh" content="0; url=allTheme.action">
+<!-- <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/skeleton.css">
-<link rel="stylesheet" href="css/web_index.css">
+<link rel="stylesheet" href="css/web_index.css"> -->
 </head>
 <body>
-	<div class="container">
+	<!-- <div class="container">
 		<div class="navbar-spacer"></div>
 		<nav class="navbar">
 			<div class="container">
@@ -66,7 +66,7 @@
 			    <input type="button" class="button" style="float: right;margin-right: 10px;" value="投票">
 			</form>
 		</div>
-	</div>
+	</div> -->
 </body>
 </html>
 
