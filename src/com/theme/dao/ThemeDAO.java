@@ -72,7 +72,6 @@ public class ThemeDAO {
 		@SuppressWarnings("unchecked")
 		List<Options> list=(List<Options>) session.createSQLQuery(sql).addEntity(Options.class).list();
 		session.close();
-		//System.out.println(list.get(0));
 		return list;
 	}
 	//通过theme id查询选项
