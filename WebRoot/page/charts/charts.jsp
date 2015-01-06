@@ -63,14 +63,21 @@
 			height : 400,
 			closable : false,
 			modal : true,//屏幕不能编辑
-			toolbar:[
-				{
-					text : '柱状图查看',
-					iconCls : 'icon-edit',
-					handler : function() {
-						change();
-					}
-			}],
+			toolbar : [ {
+				text : '柱状图查看',
+				iconCls : 'icon-edit',
+				handler : function() {
+					$("#mainChart").css("display","");
+					$("#mainChart2").css("display","none");
+				}
+			}, '-', {
+				text : '饼图查看',
+				iconCls : 'icon-edit',
+				handler : function() {
+					$("#mainChart").css("display","none");
+					$("#mainChart2").css("display","");
+				}
+			} ],
 			buttons : [ {
 				text : '完成',
 				handler : function() {
@@ -85,79 +92,67 @@
 			type : 'post',
 			dataType : 'json',
 			success : function(obj) {
-			
-				option = {
-					    title : {
-					        text:obj[0].title.text,
-					    },
-					    tooltip : {
-					        trigger: 'axis',
-					    },
-					    toolbox: {
-					        show : true,
-					        feature : {
-					            magicType : {show: true, type: ['line', 'bar']},
-					            restore : {show: true},
-					        }
-					    },
-					    calculable : true,
-					    xAxis : [
-					        {
-					            type :obj[0].xAxis.type,
-					            data : obj[0].xAxis.data,
-					        }
-					    ],
-					    yAxis : [
-					        {
-					            type : 'value'
-					        }
-					    ],
-					    series : [
-					        {
-					            type:obj[0].series.type,
-					            data:obj[0].series.data,  
-					        },
-					    ]
+					option = {
+						title : {
+							text : obj[0].title.text,
+						},
+						tooltip : {
+							trigger : 'axis',
+						},
+						toolbox : {
+							show : true,
+							feature : {
+								magicType : {
+									show : true,
+									type : [ 'line', 'bar' ]
+								},
+								restore : {
+									show : true
+								},
+							}
+						},
+						calculable : true,
+						xAxis : [ {
+							type : obj[0].xAxis.type,
+							data : obj[0].xAxis.data,
+						} ],
+						yAxis : [ {
+							type : 'value'
+						} ],
+						series : [ {
+							type : obj[0].series.type,
+							data : obj[0].series.data,
+						}, ]
 					};
-				option2 = {
-					    title : {
-					    	text:obj[0].title.text,
-					        x:'center'
-					    },
-					    tooltip : {
-					        trigger: 'item',
-					        formatter: "{a} <br/>{b} : {c} ({d}%)"
-					    },
-					    legend: {
-					        orient : 'vertical',
-					        x : 'left',
-					        //data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-					       
-					    },
-					    calculable : true,
-					    series : [
-					        {
-					            name:'访问来源',
-					            type:'pie',
-					            radius : '55%',
-					            data:[
-					                {value:335, name:'直接访问'},
-					                {value:310, name:'邮件营销'},
-					                {value:234, name:'联盟广告'},
-					                {value:135, name:'视频广告'},
-					                {value:1548, name:'搜索引擎'}
-					            ]
-					        }
-					    ]
+					option2 = {
+						title : {
+							text : obj[0].title.text,
+							x : 'center'
+						},
+						tooltip : {
+							trigger : 'item',
+							formatter : "{a} <br/>{b} : {c} ({d}%)"
+						},
+						legend : {
+							orient : 'vertical',
+							x : 'left',
+							data : obj[0].xAxis.data,
+						},
+						calculable : true,
+						series : [ {
+							name : obj[0].title.text,
+							type : 'pie',
+							radius : '55%',
+							data : obj[0].pieData,
+						} ]
 					};
-				 change(option2);
+				var myChart = echarts.init(document.getElementById('mainChart'));
+				myChart.setOption(option);
+				var myChart2 = echarts.init(document.getElementById('mainChart2'));
+				myChart2.setOption(option2);
+				$("#mainChart2").css("display","none");
 			}
 		});
-	}
-	
-	function change(option){
-		var myChart = echarts.init(document.getElementById('mainChart'));
-		myChart.setOption(option);  
 	}
 </script>
 </head>
