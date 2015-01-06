@@ -15,21 +15,21 @@
 			  opt+=optIdn[i].value+",";
 		  }
 	  }
-	  var themeid=$("#themeId1").val();
-	  var url="getcount.action?id="+opt+"&&themeId="+themeid;
-	  $.ajax({
-		  url:url,
-		  datatype:'json',
-		  success:function(data){
-			  if(data.result=="success"){
-				  alert("投票成功");
-				  $.pgwModal('close');
-			  }else{
-				  alert("您已经投过票了");
-				  $.pgwModal('close');
+		  var themeid=$("#themeId1").val();
+		  var url="getcount.action?id="+opt+"&&themeId="+themeid;
+		  $.ajax({
+			  url:url,
+			  datatype:'json',
+			  success:function(data){
+				  if(data.result=="success"){
+					  alert("投票成功");
+					  $.pgwModal('close');
+				  }else{
+					  alert("您已经投过票了");
+					  $.pgwModal('close');
+				  }
 			  }
-		  }
-	  });
+		  });
   }
 </script>
 </head>

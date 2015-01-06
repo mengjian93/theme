@@ -30,8 +30,9 @@
 		<nav class="navbar">
 			<div class="container">
 				<ul class="navbar-list">
-					<li class="navbar-item"><a href="allTheme.action"
-						class="mybut">投票专区</a></li>
+					<!-- <li class="navbar-item"><a href="allTheme.action"
+						class="mybut">投票专区</a></li> -->
+					<li class="navbar-item"><span class="mybut">投票专区</span></li>
 					<!-- <li class="navbar-item"><a href="index.jsp" class="mybut">首页</a></li> -->
 				</ul>
 			</div>
@@ -40,10 +41,9 @@
 	<div class="container">
 		<ul style="list-style: none;margin-left: 20px;">
 			<s:iterator value="list" id="t">
-		    <li>
-		        <a href="#" onclick="javascript:openDialog(<s:property value="#t.id"/>);">投票</a>
-		        <s:property value="#t.theme_name" />
-			</li>
+				<li><a href="#"
+					onclick="javascript:openDialog(<s:property value="#t.id"/>);">投票</a>
+					<s:property value="#t.theme_name" /></li>
 			</s:iterator>
 		</ul>
 	</div>

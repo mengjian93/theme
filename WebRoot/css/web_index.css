@@ -1,4 +1,3 @@
-@media screen and (min-width: 764px) {
 	.navbar {
 		left: 0;
 		position: fixed;
@@ -57,9 +56,8 @@
 	height: 230px;
 	border: 1px solid #bbb;
 }
-}
 
-@media screen and (max-width: 764px) {
+/* @media screen and (max-width: 764px) {
 	.navbar-list {
 		list-style: outside none none;
 		margin-bottom: 0;
@@ -107,4 +105,4 @@
 	border: 1px solid #bbb;
 }
 }
-
+ */
