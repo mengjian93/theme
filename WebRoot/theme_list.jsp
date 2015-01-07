@@ -25,6 +25,7 @@
 </script>
 </head>
 <body>
+<div  class="container">
 	<div class="container">
 		<div class="navbar-spacer"></div>
 		<nav class="navbar">
@@ -51,5 +52,6 @@
 		<br><br>
 	</div>
 	<div id="theme_get"></div>
+	</div>
 </body>
 </html>
