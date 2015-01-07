@@ -14,6 +14,7 @@ public class StartInit implements ServletContextListener {
 	public void contextDestroyed(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
 		logger.info("停止");
+		HibernateSessionFactory.closeSession();
 
 	}
 

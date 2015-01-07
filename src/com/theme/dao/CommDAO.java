@@ -7,13 +7,13 @@ import org.hibernate.Session;
 import com.theme.imp.base.HibernateSessionFactory;
 import com.theme.vo.Theme;
 
-public  class CommDAO {
+public  class CommDAO{
 	/*
 	 * 查询单个公共方法
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> List<T> query(Object o,String tb,List<String> counlm,String tag) throws Exception {
-		String sql="select * from"+tb+"  where id="+tag;
+		String sql="select * from  "+tb+"  where id="+tag;
 		Session session=HibernateSessionFactory.getSession();
 		List<T> obj=(List<T>)session.createSQLQuery(sql).addEntity(o.getClass()).list();
 		session.close();
