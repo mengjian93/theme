@@ -1,2 +1,4 @@
+/.struts.mex
 /com
-/org
+/hibernate.cfg.xml
+/struts.xml
