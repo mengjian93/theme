@@ -4,7 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>My JSP 'charts.jsp' starting page</title>
+<title>charts</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
@@ -92,6 +92,7 @@
 			type : 'post',
 			dataType : 'json',
 			success : function(obj) {
+				console.log(obj);
 					option = {
 						title : {
 							text : obj[0].title.text,
