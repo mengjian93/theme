@@ -3,10 +3,10 @@ package com.theme.action;
 
 import net.sf.json.JSONArray;
 import com.constant.Type;
-import com.opensymphony.xwork2.ActionSupport;
+import com.theme.imp.base.BaseAction;
 import com.theme.tools.ChartTool;
 
-public class ChartsAction extends ActionSupport {
+public class ChartsAction extends BaseAction {
 
 	/**
 	 * 

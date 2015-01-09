@@ -4,18 +4,15 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import net.sf.json.JSONObject;
-
 import org.apache.struts2.ServletActionContext;
-
-import com.opensymphony.xwork2.ActionSupport;
 import com.theme.dao.IpDAO;
 import com.theme.dao.ThemeDAO;
+import com.theme.imp.base.BaseAction;
 import com.theme.vo.Options;
 import com.theme.vo.Theme;
 
-public class IndexAction extends ActionSupport{
+public class IndexAction extends BaseAction{
 	ThemeDAO dao=new ThemeDAO();
 	IpDAO ipdao=new IpDAO();
 	private List<Theme> list;

@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import net.sf.json.JSONObject;
-
-import com.opensymphony.xwork2.ActionSupport;
 import com.theme.dao.ThemeDAO;
+import com.theme.imp.base.BaseAction;
 import com.theme.vo.Options;
 import com.theme.vo.Theme;
 
-public class ThemeAction extends ActionSupport {// 主题相关页面跳转action
+public class ThemeAction extends BaseAction {// 主题相关页面跳转action
 
 	private static final long serialVersionUID = 1L;
 	private String id;

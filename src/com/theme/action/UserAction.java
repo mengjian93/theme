@@ -2,14 +2,12 @@ package com.theme.action;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import net.sf.json.JSONObject;
-
-import com.opensymphony.xwork2.ActionSupport;
 import com.theme.dao.UserDAO;
+import com.theme.imp.base.BaseAction;
 import com.theme.vo.User;
 
-public class UserAction extends ActionSupport {
+public class UserAction extends BaseAction {
 
 	/**
 	 * 
